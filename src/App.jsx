@@ -273,8 +273,8 @@ function App() {
         )}
       </div>
 
-      {/* Footer */}
-      <footer style={{
+    {/* Footer */}
+    <footer style={{
         borderTop: '1px solid #e5e7eb',
         padding: '2rem',
         marginTop: '4rem',
@@ -282,7 +282,29 @@ function App() {
         color: '#666',
         fontSize: '0.875rem'
       }}>
-        <p style={{ margin: 0 }}>
+        <p style={{ margin: '0 0 0.5rem 0' }}>
+          Built by <strong>John Chan</strong>
+        </p>
+        <p style={{ margin: '0 0 0.5rem 0' }}>
+          <a 
+            href="https://linkedin.com/in/johnmchan" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ color: '#3b82f6', textDecoration: 'none' }}
+          >
+            LinkedIn
+          </a>
+          {' • '}
+          <a 
+            href="https://github.com/jchan95/labelops" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ color: '#3b82f6', textDecoration: 'none' }}
+          >
+            GitHub
+          </a>
+        </p>
+        <p style={{ margin: 0, fontSize: '0.8rem', color: '#9ca3af' }}>
           Built with React, Supabase, and Recharts
         </p>
       </footer>
