@@ -2,7 +2,7 @@
 
 A data labeling quality and operations dashboard built to demonstrate understanding of AI training data workflows, quality control systems, and operational metrics.
 
-**Live Demo:** [[LabelOps]](https://labelops.netlify.app/)
+**Live Demo:** [LabelOps](https://labelops.netlify.app/)
 
 ---
 
