@@ -1,16 +1,101 @@
-# React + Vite
+# LabelOps
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A data labeling quality and operations dashboard built to demonstrate understanding of AI training data workflows, quality control systems, and operational metrics.
 
-Currently, two official plugins are available:
+**Live Demo:** [LabelOps](https://labelops.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## What It Does
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+LabelOps simulates a data labeling operation for sentiment analysis, tracking quality metrics and operational performance across 10 labelers processing 1,000 movie reviews.
 
-## Expanding the ESLint configuration
+### Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Performance Dashboard** - Real-time metrics showing accuracy, throughput, and cost per labeler
+- **Quality Analytics** - Edge case detection for samples with low agreement that need review
+- **SQL Query Builder** - Interactive tool to explore the database with visual query construction
+- **Operational Metrics** - Track total labels, accuracy rates, and cost analysis
+
+---
+
+## Tech Stack
+
+- **Frontend:** React, JavaScript
+- **Backend:** Supabase (PostgreSQL)
+- **Data Viz:** Recharts
+- **Deployment:** Netlify
+
+---
+
+## Database Schema
+
+The system uses 5 PostgreSQL tables:
+
+- `text_samples` - Movie reviews with true sentiment labels
+- `labelers` - Worker profiles with accuracy and rate information
+- `labels` - Individual labeling records with timestamps and confidence scores
+- `quality_metrics` - Aggregated quality statistics
+- `edge_cases` - Samples flagged for review
+
+---
+
+## Local Development
+
+### Prerequisites
+
+- Node.js 16+
+- Supabase account
+
+### Setup
+
+1. Clone the repository
+```bash
+git clone https://github.com/jchan95/labelops.git
+cd labelops
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Create a `.env` file with your Supabase credentials
+```
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+4. Run the development server
+```bash
+npm run dev
+```
+
+5. Open [http://localhost:5173](http://localhost:5173)
+
+---
+
+## Project Goals
+
+This project was built to demonstrate:
+
+- Understanding of data labeling operations and quality control
+- Full-stack development with React and PostgreSQL
+- Database design and complex SQL queries
+- Data visualization and dashboard design
+- Operational metrics relevant to AI/ML companies
+
+---
+
+## Contact
+
+**John Chan**  
+📧 jchan95@gmail.com  
+💼 [LinkedIn](https://linkedin.com/in/jmchan)  
+🐙 [GitHub](https://github.com/jchan95)
+
+---
+
+## License
+
+MIT License - feel free to use this project for learning purposes.
